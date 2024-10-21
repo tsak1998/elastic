@@ -65,7 +65,7 @@ services:
       discovery.type: single-node
     networks:
       - elk
-      - my_shared_network
+
     restart: unless-stopped
 
   kibana:
@@ -88,8 +88,6 @@ services:
 networks:
   elk:
     driver: bridge
-  my_shared_network:
-    external: true
 
 volumes:
   elasticsearch:
